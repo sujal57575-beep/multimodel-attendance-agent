@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Reports · AttendAI{% endblock %}
+{% block page_title %}<h1 class="page-heading">Session Report</h1>{% endblock %}
+
+{% block content %}
+<div class="session-info-bar glass">
+  <div class="info-item"><span class="info-label">Session</span><span class="info-value" id="si-name">Loading…</span></div>
+  <div class="info-item"><span class="info-label">Duration</span><span class="info-value" id="si-duration">—</span></div>
+</div>
+
+<div class="report-actions glass">
+  <h2 class="chart-title">Export Options</h2>
+  <div class="export-buttons">
+    <a id="btn-dl-csv" href="/api/sessions/{{ session_id }}/report" class="btn btn-primary" download>
+      <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      Download CSV
+    </a>
+    <button class="btn btn-ghost" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5 4v3H4a2 2 0 00-2 2v3a2 2 0 002 2h1v2a2 2 0 002 2h6a2 2 0 002-2v-2h1a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0H7v3h6V4zm0 8H7v4h6v-4z" clip-rule="evenodd"/></svg>
+      Print
+    </button>
+  </div>
+</div>
+
+<div class="report-sections">
+  <div class="table-card glass">
+    <div class="table-header"><h2 class="chart-title">Attendance Summary</h2></div>
+    <div id="report-attendance-summary" class="report-summary-grid"></div>
+  </div>
+
+  <div class="table-card glass">
+    <div class="table-header"><h2 class="chart-title">Engagement Summary</h2></div>
+    <div id="report-engagement-summary" class="report-summary-grid"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const SESSION_ID = "{{ session_id }}";
+  async function loadReportData(sid) {
+    const [attRes, engRes, sesRes] = await Promise.all([
+      fetch(`/api/sessions/${sid}/attendance`),
+      fetch(`/api/sessions/${sid}/engagement`),
+      fetch(`/api/sessions/${sid}`),
+    ]);
+    const att = await attRes.json();
+    const eng = await engRes.json();
+    const ses = await sesRes.json();
+
+    document.getElementById('si-name').textContent = ses.name || '—';
+    document.getElementById('si-duration').textContent = ses.duration_seconds ? `${Math.round(ses.duration_seconds/60)} min` : '—';
+
+    document.getElementById('report-attendance-summary').innerHTML = `
+      <div class="summary-stat"><span class="summary-val">${att.total || 0}</span><span class="summary-lbl">Detected</span></div>
+      <div class="summary-stat"><span class="summary-val">${att.marked || 0}</span><span class="summary-lbl">Marked Present</span></div>
+      <div class="summary-stat"><span class="summary-val">${att.attendance_pct || 0}%</span><span class="summary-lbl">Rate</span></div>
+    `;
+
+    const s = eng.summary || {};
+    document.getElementById('report-engagement-summary').innerHTML = `
+      <div class="summary-stat"><span class="summary-val">${(s.mean||0).toFixed(2)}</span><span class="summary-lbl">Avg Score</span></div>
+      <div class="summary-stat"><span class="summary-val">${s.trend || '—'}</span><span class="summary-lbl">Trend</span></div>
+      <div class="summary-stat"><span class="summary-val">${s.low_engagement_windows||0}</span><span class="summary-lbl">Low Windows</span></div>
+      <div class="summary-stat"><span class="summary-val">${s.window_count||0}</span><span class="summary-lbl">Total Windows</span></div>
+    `;
+  }
+  document.addEventListener('DOMContentLoaded', () => loadReportData(SESSION_ID));
+</script>
+{% endblock %}

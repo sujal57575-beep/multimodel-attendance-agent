@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Attendance · AttendAI{% endblock %}
+{% block page_title %}<h1 class="page-heading">Attendance Records</h1>{% endblock %}
+
+{% block top_actions %}
+  <a href="/api/sessions/{{ session_id }}/report" class="btn btn-ghost" id="btn-download-csv" download>
+    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+    Export CSV
+  </a>
+{% endblock %}
+
+{% block content %}
+<div class="session-info-bar glass" id="session-info-bar">
+  <div class="info-item"><span class="info-label">Session</span><span class="info-value" id="si-name">Loading…</span></div>
+  <div class="info-item"><span class="info-label">Subject</span><span class="info-value" id="si-subject">—</span></div>
+  <div class="info-item"><span class="info-label">Duration</span><span class="info-value" id="si-duration">—</span></div>
+  <div class="info-item"><span class="info-label">Status</span><span class="info-value" id="si-status">—</span></div>
+</div>
+
+<!-- Attendance summary cards -->
+<div class="kpi-grid kpi-grid--3">
+  <div class="kpi-card glass"><div class="kpi-icon kpi-icon--blue"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/></svg></div><div class="kpi-body"><span class="kpi-value" id="att-total">—</span><span class="kpi-label">Detected</span></div></div>
+  <div class="kpi-card glass"><div class="kpi-icon kpi-icon--green"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg></div><div class="kpi-body"><span class="kpi-value" id="att-marked">—</span><span class="kpi-label">Marked Present</span></div></div>
+  <div class="kpi-card glass"><div class="kpi-icon kpi-icon--amber"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg></div><div class="kpi-body"><span class="kpi-value" id="att-review">—</span><span class="kpi-label">Needs Review</span></div></div>
+</div>
+
+<div class="notice-box notice-box--info glass">
+  <strong>⚠️ Privacy notice:</strong> Participants are tracked anonymously by default. Display names and student IDs can only be added manually by an authorised instructor.
+</div>
+
+<!-- Attendance table -->
+<div class="table-card glass">
+  <div class="table-header">
+    <h2 class="chart-title">Participant Records</h2>
+    <span class="chart-badge" id="att-needs-review-badge" style="display:none">⚠️ Some need review</span>
+  </div>
+  <div class="table-responsive">
+    <table class="data-table" id="attendance-table" aria-label="Attendance records">
+      <thead>
+        <tr>
+          <th>Track ID</th>
+          <th>Display Name</th>
+          <th>First Seen</th>
+          <th>Last Seen</th>
+          <th>Duration</th>
+          <th>Confidence</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="attendance-tbody">
+        <tr class="skeleton-row"><td colspan="8"><div class="skeleton"></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/attendance.js') }}"></script>
+<script>
+  const SESSION_ID = "{{ session_id }}";
+  document.addEventListener('DOMContentLoaded', () => {
+    loadAttendanceData(SESSION_ID);
+    loadSessionInfo(SESSION_ID);
+  });
+</script>
+{% endblock %}

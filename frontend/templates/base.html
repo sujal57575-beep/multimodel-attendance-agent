@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Multimodal Attendance Agent{% endblock %}</title>
+  <meta name="description" content="{% block description %}AI-powered classroom attendance and engagement analytics platform{% endblock %}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <!-- Privacy notice banner -->
+  <div id="privacy-notice" class="privacy-banner" aria-live="polite">
+    <span class="privacy-icon">🔒</span>
+    <span>All processing is <strong>local and offline</strong>. No student data is transmitted externally.</span>
+    <button onclick="document.getElementById('privacy-notice').style.display='none'" aria-label="Dismiss">✕</button>
+  </div>
+
+  <!-- Sidebar nav -->
+  <nav class="sidebar" id="sidebar" aria-label="Main navigation">
+    <div class="sidebar-logo">
+      <div class="logo-icon">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="13" stroke="url(#lg)" stroke-width="2"/>
+          <path d="M8 14l4 4 8-8" stroke="url(#lg2)" stroke-width="2.5" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="28" y2="28">
+              <stop offset="0%" stop-color="#6366f1"/>
+              <stop offset="100%" stop-color="#8b5cf6"/>
+            </linearGradient>
+            <linearGradient id="lg2" x1="0" y1="0" x2="28" y2="28">
+              <stop offset="0%" stop-color="#6366f1"/>
+              <stop offset="100%" stop-color="#a78bfa"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">AttendAI</span>
+        <span class="logo-sub">v1.0 · Offline-First</span>
+      </div>
+    </div>
+
+    <ul class="nav-list" role="list">
+      <li><a href="/dashboard" class="nav-link {% if request.path == '/dashboard' %}active{% endif %}" id="nav-dashboard">
+        <svg class="nav-icon" viewBox="0 0 20 20"><path d="M2 10.5a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1H3a1 1 0 01-1-1v-6zm6-3a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1v-9zm6-4a1 1 0 011-1h2a1 1 0 011 1v13a1 1 0 01-1 1h-2a1 1 0 01-1-1V3.5z" fill="currentColor"/></svg>
+        Dashboard
+      </a></li>
+      <li><a href="/sessions" class="nav-link {% if request.path == '/sessions' %}active{% endif %}" id="nav-sessions">
+        <svg class="nav-icon" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" fill="currentColor"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" fill="currentColor"/></svg>
+        Sessions
+      </a></li>
+      <li class="nav-section">Analytics</li>
+      <li><a href="#" class="nav-link" id="nav-engagement">
+        <svg class="nav-icon" viewBox="0 0 20 20"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zm4-4a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H7a1 1 0 01-1-1V7zm4-4a1 1 0 011-1h2a1 1 0 011 1v13a1 1 0 01-1 1h-2a1 1 0 01-1-1V3z" fill="currentColor"/></svg>
+        Engagement
+      </a></li>
+      <li><a href="#" class="nav-link" id="nav-recommendations">
+        <svg class="nav-icon" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" fill="currentColor"/></svg>
+        AI Suggestions
+      </a></li>
+      <li class="nav-section">System</li>
+      <li><a href="/settings" class="nav-link {% if request.path == '/settings' %}active{% endif %}" id="nav-settings">
+        <svg class="nav-icon" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" fill="currentColor"/></svg>
+        Settings
+      </a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div class="system-status" id="system-status">
+        <span class="status-dot online"></span>
+        <span>System Online</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="main-content" id="main-content">
+    <header class="top-bar">
+      <button class="menu-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="top-bar-title">{% block page_title %}{% endblock %}</div>
+      <div class="top-bar-actions">{% block top_actions %}{% endblock %}</div>
+    </header>
+
+    <div class="page-content">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+
+  <!-- Global modal -->
+  <div id="global-modal" class="modal-overlay" role="dialog" aria-modal="true" style="display:none">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- Toast notifications -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

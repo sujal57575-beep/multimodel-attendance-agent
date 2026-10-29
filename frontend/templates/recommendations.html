@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}AI Suggestions · AttendAI{% endblock %}
+{% block page_title %}<h1 class="page-heading">AI Teaching Suggestions</h1>{% endblock %}
+
+{% block content %}
+<div class="session-info-bar glass">
+  <div class="info-item"><span class="info-label">Session</span><span class="info-value" id="si-name">Loading…</span></div>
+</div>
+
+<div class="notice-box notice-box--info glass">
+  <strong>🤖 AI Transparency:</strong> Recommendations are generated from measured session data only. They are advisory — the instructor retains full authority over academic decisions. Confidence levels indicate data quality, not certainty.
+</div>
+
+<div id="recommendations-grid" class="rec-grid" role="list" aria-label="Teaching recommendations">
+  <div class="loading-state" id="rec-loading">
+    <div class="spinner"></div>
+    <p>Loading recommendations…</p>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const SESSION_ID = "{{ session_id }}";
+  async function loadRecommendations(sessionId) {
+    try {
+      const res = await fetch(`/api/sessions/${sessionId}/recommendations`);
+      const data = await res.json();
+      const grid = document.getElementById('recommendations-grid');
+      document.getElementById('rec-loading').style.display = 'none';
+
+      if (!data.recommendations || data.recommendations.length === 0) {
+        grid.innerHTML = '<div class="empty-state"><div class="empty-icon">💡</div><h3>No recommendations yet</h3><p>Process a session video to generate teaching suggestions.</p></div>';
+        return;
+      }
+
+      grid.innerHTML = data.recommendations.map(r => `
+        <div class="rec-card glass" role="listitem">
+          <div class="rec-header">
+            <div class="rec-title-row">
+              <h3 class="rec-title">${escHtml(r.title)}</h3>
+              <div class="rec-badges">
+                <span class="badge badge--${r.source === 'gemini' ? 'violet' : 'blue'}">${r.source === 'gemini' ? '✨ AI' : '📐 Rule'}</span>
+                <span class="badge badge--confidence">${Math.round((r.confidence || 0) * 100)}% confidence</span>
+              </div>
+            </div>
+            <div class="confidence-bar-wrap"><div class="confidence-bar" style="width:${(r.confidence||0)*100}%"></div></div>
+          </div>
+          <div class="rec-body">
+            <div class="rec-section"><strong>Observation</strong><p>${escHtml(r.observation)}</p></div>
+            <div class="rec-section rec-suggestion"><strong>💡 Suggestion</strong><p>${escHtml(r.suggestion)}</p></div>
+          </div>
+          <div class="rec-footer">
+            <span class="rec-timestamp">Generated: ${new Date(r.created_at).toLocaleString()}</span>
+          </div>
+        </div>
+      `).join('');
+    } catch(e) {
+      showToast('Failed to load recommendations', 'error');
+    }
+  }
+
+  function escHtml(str) {
+    const d = document.createElement('div');
+    d.textContent = str || '';
+    return d.innerHTML;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    loadRecommendations(SESSION_ID);
+    loadSessionInfo(SESSION_ID);
+  });
+</script>
+{% endblock %}

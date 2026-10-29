@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Engagement · AttendAI{% endblock %}
+{% block page_title %}<h1 class="page-heading">Engagement Analytics</h1>{% endblock %}
+
+{% block content %}
+<div class="session-info-bar glass">
+  <div class="info-item"><span class="info-label">Session</span><span class="info-value" id="si-name">Loading…</span></div>
+  <div class="info-item"><span class="info-label">Windows</span><span class="info-value" id="si-windows">—</span></div>
+  <div class="info-item"><span class="info-label">Avg Score</span><span class="info-value" id="si-avg">—</span></div>
+  <div class="info-item"><span class="info-label">Trend</span><span class="info-value" id="si-trend">—</span></div>
+</div>
+
+<div class="notice-box notice-box--warn glass">
+  <strong>ℹ️ Interpretation notice:</strong> Engagement scores are approximate behavioural indicators derived from motion, presence, and audio activity. They do not directly measure student understanding, attention, or wellbeing. Always review with human judgement.
+</div>
+
+<section class="charts-row">
+  <div class="chart-card glass" style="flex:2">
+    <div class="chart-header">
+      <h2 class="chart-title">Composite Engagement Over Time</h2>
+      <div class="chart-legend">
+        <span class="legend-dot" style="background:#6366f1"></span>Composite
+        <span class="legend-dot" style="background:#22c55e"></span>Presence
+        <span class="legend-dot" style="background:#f59e0b"></span>Audio
+      </div>
+    </div>
+    <div class="chart-body">
+      <canvas id="chart-composite" aria-label="Composite engagement timeline"></canvas>
+    </div>
+  </div>
+  <div class="chart-card glass" style="flex:1">
+    <div class="chart-header"><h2 class="chart-title">Signal Breakdown</h2></div>
+    <div class="chart-body">
+      <canvas id="chart-radar" aria-label="Signal radar chart"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- Window metrics table -->
+<div class="table-card glass">
+  <div class="table-header">
+    <h2 class="chart-title">Time Window Details</h2>
+    <span class="chart-badge" id="low-windows-badge"></span>
+  </div>
+  <div class="table-responsive">
+    <table class="data-table" id="engagement-table" aria-label="Engagement window details">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Presence</th>
+          <th>Motion</th>
+          <th>Audio</th>
+          <th>Composite</th>
+          <th>Participants</th>
+          <th>Confidence</th>
+        </tr>
+      </thead>
+      <tbody id="engagement-tbody">
+        <tr class="skeleton-row"><td colspan="9"><div class="skeleton"></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="{{ url_for('static', filename='js/engagement.js') }}"></script>
+<script>
+  const SESSION_ID = "{{ session_id }}";
+  document.addEventListener('DOMContentLoaded', () => {
+    loadEngagementData(SESSION_ID);
+    loadSessionInfo(SESSION_ID);
+  });
+</script>
+{% endblock %}

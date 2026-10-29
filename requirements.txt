@@ -1,0 +1,26 @@
+# Core framework
+flask>=3.0.0
+python-dotenv>=1.0.0
+
+# Computer Vision
+opencv-python>=4.9.0
+numpy>=1.26.0
+
+# YOLOv8 detection (recommended)
+ultralytics>=8.0.0
+
+# Audio processing
+librosa>=0.10.0
+soundfile>=0.12.0
+
+# AI / GenAI (optional — for Gemini integration)
+google-generativeai>=0.7.0
+
+# Text-to-speech (offline, optional)
+pyttsx3>=2.90
+
+# Report generation
+# fpdf2>=2.7.0   # Uncomment for PDF report support
+
+# Testing
+pytest>=8.0.0

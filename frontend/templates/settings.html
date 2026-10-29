@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block title %}Settings · AttendAI{% endblock %}
+{% block page_title %}<h1 class="page-heading">Settings & Privacy</h1>{% endblock %}
+
+{% block content %}
+<div class="settings-grid">
+  <!-- System health -->
+  <div class="settings-section glass" id="health-section">
+    <h2 class="settings-section-title">System Status</h2>
+    <div id="health-checks" class="health-grid">
+      <div class="spinner"></div>
+    </div>
+    <button class="btn btn-ghost mt-2" onclick="loadHealth()">Refresh</button>
+  </div>
+
+  <!-- CV / Processing -->
+  <div class="settings-section glass">
+    <h2 class="settings-section-title">Computer Vision</h2>
+    <div class="settings-list">
+      <div class="setting-row">
+        <div><strong>Detection Backend</strong><p class="setting-desc">YOLOv8 (recommended) or HOG fallback</p></div>
+        <span class="setting-value" id="cv-backend">—</span>
+      </div>
+      <div class="setting-row">
+        <div><strong>Attendance Threshold</strong><p class="setting-desc">Minimum continuous presence required</p></div>
+        <span class="setting-value">120 seconds</span>
+      </div>
+      <div class="setting-row">
+        <div><strong>Frame Sample Rate</strong><p class="setting-desc">Analyse every N frames</p></div>
+        <span class="setting-value">5 frames</span>
+      </div>
+      <div class="setting-row">
+        <div><strong>Facial Recognition</strong><p class="setting-desc">Disabled by default — requires explicit consent</p></div>
+        <span class="badge badge--red" id="facial-rec-status">DISABLED</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy & Retention -->
+  <div class="settings-section glass">
+    <h2 class="settings-section-title">Privacy & Data Retention</h2>
+    <div class="notice-box notice-box--info" style="margin-bottom:1rem">
+      All data is stored locally. No student recordings are transmitted externally.
+    </div>
+    <div class="settings-list">
+      <div class="setting-row">
+        <div><strong>Data Retention</strong><p class="setting-desc">Sessions deleted after</p></div>
+        <span class="setting-value">90 days</span>
+      </div>
+      <div class="setting-row">
+        <div><strong>Anonymous Tracking</strong><p class="setting-desc">Default participant identifier</p></div>
+        <span class="badge badge--green">ENABLED</span>
+      </div>
+      <div class="setting-row">
+        <div><strong>Cloud AI (Gemini)</strong><p class="setting-desc">Optional enhancement — off by default</p></div>
+        <span class="badge" id="gemini-status-badge">Checking…</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class="settings-section glass">
+    <h2 class="settings-section-title">About</h2>
+    <div class="settings-list">
+      <div class="setting-row"><div><strong>Version</strong></div><span class="setting-value">1.0.0</span></div>
+      <div class="setting-row"><div><strong>Mode</strong></div><span class="badge badge--green">Offline-First</span></div>
+      <div class="setting-row"><div><strong>Architecture</strong></div><span class="setting-value">Local · SQLite · OpenCV · YOLOv8</span></div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  async function loadHealth() {
+    const res = await fetch('/api/health');
+    const data = await res.json();
+    const grid = document.getElementById('health-checks');
+    grid.innerHTML = Object.entries(data.checks || {}).map(([k, v]) => `
+      <div class="health-item">
+        <span class="health-key">${k}</span>
+        <span class="badge ${v==='available'?'badge--green':'badge--red'}">${v}</span>
+      </div>
+    `).join('');
+
+    const gemini = (data.checks?.gemini === 'available') ? 'badge--green' : 'badge--red';
+    document.getElementById('gemini-status-badge').className = `badge ${gemini}`;
+    document.getElementById('gemini-status-badge').textContent = data.checks?.gemini === 'available' ? 'CONFIGURED' : 'DISABLED';
+    document.getElementById('cv-backend').textContent = data.checks?.ultralytics === 'available' ? 'YOLOv8' : 'HOG Fallback';
+  }
+  document.addEventListener('DOMContentLoaded', loadHealth);
+</script>
+{% endblock %}

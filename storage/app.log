@@ -1,0 +1,210 @@
+2026-10-29 20:24:09,790 [INFO] models.database — Database initialised at :memory:
+2026-10-29 20:24:13,115 [WARNING] services.audio_processor — soundfile not installed; audio analysis disabled
+2026-10-29 20:24:13,116 [WARNING] services.audio_processor — librosa not installed; audio features unavailable
+2026-10-29 20:24:13,137 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:24:13,298 [INFO] models.database — Database initialised at :memory:
+2026-10-29 20:24:13,303 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:24:13,306 [INFO] models.database — Database initialised at :memory:
+2026-10-29 20:24:13,311 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:24:13,315 [INFO] models.database — Database initialised at :memory:
+2026-10-29 20:24:13,320 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:24:13,324 [INFO] models.database — Database initialised at :memory:
+2026-10-29 20:24:13,329 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:24:13,332 [INFO] models.database — Database initialised at :memory:
+2026-10-29 20:24:13,337 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:25:06,712 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-29 20:25:06,830 [WARNING] services.audio_processor — soundfile not installed; audio analysis disabled
+2026-10-29 20:25:06,831 [WARNING] services.audio_processor — librosa not installed; audio features unavailable
+2026-10-29 20:25:06,848 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:25:06,909 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-29 20:25:06,915 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:25:06,918 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-29 20:25:06,924 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:25:06,940 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-29 20:25:06,945 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:25:06,949 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-29 20:25:06,954 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:25:06,959 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-29 20:25:06,964 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:25:54,290 [INFO] models.database — Database initialised at C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\attendance.db
+2026-10-29 20:25:54,392 [WARNING] services.audio_processor — soundfile not installed; audio analysis disabled
+2026-10-29 20:25:54,393 [WARNING] services.audio_processor — librosa not installed; audio features unavailable
+2026-10-29 20:25:54,406 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:26:03,380 [INFO] models.database — Database initialised at C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\attendance.db
+2026-10-29 20:26:03,482 [WARNING] services.audio_processor — soundfile not installed; audio analysis disabled
+2026-10-29 20:26:03,483 [WARNING] services.audio_processor — librosa not installed; audio features unavailable
+2026-10-29 20:26:03,499 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:26:23,149 [INFO] models.database — Database initialised at C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\attendance.db
+2026-10-29 20:26:23,258 [WARNING] services.audio_processor — soundfile not installed; audio analysis disabled
+2026-10-29 20:26:23,258 [WARNING] services.audio_processor — librosa not installed; audio features unavailable
+2026-10-29 20:26:23,273 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-29 20:26:23,288 [INFO] werkzeug — WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.7:5000
+2026-10-29 20:26:23,288 [INFO] werkzeug — Press CTRL+C to quit
+2026-10-29 20:26:49,663 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:26:49] "GET / HTTP/1.1" 302 -
+2026-10-29 20:26:49,680 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:26:49] "GET /dashboard HTTP/1.1" 200 -
+2026-10-29 20:26:56,498 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:26:56] "GET /sessions HTTP/1.1" 200 -
+2026-10-29 20:26:56,517 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:26:56] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:26:56,528 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:26:56] "GET /settings HTTP/1.1" 200 -
+2026-10-29 20:27:29,306 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET / HTTP/1.1" 302 -
+2026-10-29 20:27:29,313 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /dashboard HTTP/1.1" 200 -
+2026-10-29 20:27:29,506 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2026-10-29 20:27:29,534 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-10-29 20:27:29,554 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /static/js/sessions.js HTTP/1.1" 200 -
+2026-10-29 20:27:29,772 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:27:29,779 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:29,782 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:29,793 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:29,795 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:29,795 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:29,801 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:29,801 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:29,809 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:29,811 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:29,812 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:29,813 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:29,825 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:29,832 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:27:29,844 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:27:29,848 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:27:29,853 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:29,868 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:29,871 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:29,873 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:29,876 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:29,879 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:29,883 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:29,887 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:29,892 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:29,897 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:29,902 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:29,922 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:29] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:30,614 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:30] "GET /favicon.ico HTTP/1.1" 404 -
+2026-10-29 20:27:40,247 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:40] "GET /sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:40,270 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:40] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-29 20:27:40,272 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:40] "GET /static/js/attendance.js HTTP/1.1" 200 -
+2026-10-29 20:27:40,274 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:40] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-29 20:27:40,286 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:40] "GET /api/sessions/18de140d8ffa4635b85d467be4714405 HTTP/1.1" 200 -
+2026-10-29 20:27:40,308 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:40] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:48,562 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /dashboard HTTP/1.1" 200 -
+2026-10-29 20:27:48,587 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-29 20:27:48,587 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-29 20:27:48,588 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /static/js/sessions.js HTTP/1.1" 304 -
+2026-10-29 20:27:48,605 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:27:48,616 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:48,617 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:48,617 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:48,623 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:48,628 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:48,634 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:48,642 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:48,644 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:48,645 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:48,648 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:48,648 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:48,649 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:48,655 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:27:48,660 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:27:48,665 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:27:48,668 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:48,674 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:48,679 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:48,696 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:48,697 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:48,701 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:48,719 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:48,723 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:48,724 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:48,729 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:48,747 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:48,757 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:48] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:52,619 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:52] "GET /sessions HTTP/1.1" 200 -
+2026-10-29 20:27:52,640 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:52] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-29 20:27:52,643 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:52] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-29 20:27:52,644 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:52] "GET /static/js/sessions.js HTTP/1.1" 304 -
+2026-10-29 20:27:52,662 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:52] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:27:55,172 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:55] "GET /sessions/18de140d8ffa4635b85d467be4714405/report HTTP/1.1" 200 -
+2026-10-29 20:27:55,191 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:55] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-29 20:27:55,191 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:55] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-29 20:27:55,197 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:55] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-29 20:27:55,216 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:55] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-29 20:27:55,231 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:27:55] "GET /api/sessions/18de140d8ffa4635b85d467be4714405 HTTP/1.1" 200 -
+2026-10-29 20:28:48,041 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /dashboard HTTP/1.1" 200 -
+2026-10-29 20:28:48,067 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-29 20:28:48,068 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-29 20:28:48,070 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /static/js/sessions.js HTTP/1.1" 304 -
+2026-10-29 20:28:48,083 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:28:48,093 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-29 20:28:48,099 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-29 20:28:48,123 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-29 20:28:48,123 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-29 20:28:48,127 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-29 20:28:48,128 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-29 20:28:48,130 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-29 20:28:48,132 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-29 20:28:48,145 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/attendance HTTP/1.1" 200 -
+2026-10-29 20:28:48,147 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-29 20:28:48,147 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-29 20:28:48,149 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/engagement HTTP/1.1" 200 -
+2026-10-29 20:28:48,156 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:28:48,163 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:28:48,167 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:28:48,172 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/engagement HTTP/1.1" 200 -
+2026-10-29 20:28:48,173 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-29 20:28:48,179 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-29 20:28:48,199 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-29 20:28:48,200 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-29 20:28:48,205 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-29 20:28:48,207 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-29 20:28:48,211 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-29 20:28:48,213 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-29 20:28:48,217 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-29 20:28:48,222 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/attendance HTTP/1.1" 200 -
+2026-10-29 20:28:48,225 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-29 20:28:48,871 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /sessions HTTP/1.1" 200 -
+2026-10-29 20:28:48,901 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-29 20:28:48,902 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-29 20:28:48,905 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /static/js/sessions.js HTTP/1.1" 304 -
+2026-10-29 20:28:48,920 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:48] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:28:53,822 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:53] "GET /settings HTTP/1.1" 200 -
+2026-10-29 20:28:53,846 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:53] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-29 20:28:53,847 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:53] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-29 20:28:53,964 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:53] "GET /api/health HTTP/1.1" 200 -
+2026-10-29 20:28:54,158 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:54] "GET /settings HTTP/1.1" 200 -
+2026-10-29 20:28:54,184 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:54] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-29 20:28:54,186 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:54] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-29 20:28:54,196 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:28:54] "GET /api/health HTTP/1.1" 200 -
+2026-10-29 20:29:07,028 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /dashboard HTTP/1.1" 200 -
+2026-10-29 20:29:07,052 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-29 20:29:07,053 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-29 20:29:07,055 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /static/js/sessions.js HTTP/1.1" 304 -
+2026-10-29 20:29:07,067 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:29:07,076 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-29 20:29:07,095 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-29 20:29:07,102 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-29 20:29:07,103 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-29 20:29:07,111 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-29 20:29:07,112 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-29 20:29:07,113 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-29 20:29:07,131 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-29 20:29:07,133 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/attendance HTTP/1.1" 200 -
+2026-10-29 20:29:07,132 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/engagement HTTP/1.1" 200 -
+2026-10-29 20:29:07,139 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-29 20:29:07,142 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-29 20:29:07,151 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:29:07,156 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:29:07,162 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-29 20:29:07,169 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-29 20:29:07,181 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-29 20:29:07,188 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-29 20:29:07,199 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/engagement HTTP/1.1" 200 -
+2026-10-29 20:29:07,203 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-29 20:29:07,211 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-29 20:29:07,228 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-29 20:29:07,231 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-29 20:29:07,239 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-29 20:29:07,242 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/attendance HTTP/1.1" 200 -
+2026-10-29 20:29:07,255 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-29 20:29:07,263 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
