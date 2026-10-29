@@ -45,6 +45,9 @@ CREATE TABLE IF NOT EXISTS participants (
     attendance_marked INTEGER DEFAULT 0,     -- 0 | 1
     confidence      REAL DEFAULT 1.0,        -- detection confidence
     needs_review    INTEGER DEFAULT 0,
+    face_verified   INTEGER DEFAULT 0,       -- 0 | 1 (verified by face detector)
+    face_count      INTEGER DEFAULT 0,       -- number of frames with face detected
+    face_confidence REAL DEFAULT 0.0,        -- average face confidence
     FOREIGN KEY (session_id) REFERENCES sessions(id)
 );
 
@@ -155,10 +158,19 @@ def db_session():
 
 
 def init_db():
-    """Create all tables if they don't exist."""
+    """Create all tables if they don't exist, and migrate columns if needed."""
     Path(Config.DATABASE_PATH).parent.mkdir(parents=True, exist_ok=True)
     with db_session() as conn:
         conn.executescript(DDL)
+        # Migrate participants columns if database already existed
+        cursor = conn.execute("PRAGMA table_info(participants)")
+        cols = {row["name"] for row in cursor.fetchall()}
+        if "face_verified" not in cols:
+            conn.execute("ALTER TABLE participants ADD COLUMN face_verified INTEGER DEFAULT 0")
+        if "face_count" not in cols:
+            conn.execute("ALTER TABLE participants ADD COLUMN face_count INTEGER DEFAULT 0")
+        if "face_confidence" not in cols:
+            conn.execute("ALTER TABLE participants ADD COLUMN face_confidence REAL DEFAULT 0.0")
     logger.info("Database initialised at %s", Config.DATABASE_PATH)
 
 

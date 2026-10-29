@@ -27,12 +27,14 @@ def generate_csv(session: dict, participants: list, metrics: list) -> str:
     writer.writerow([])
 
     writer.writerow(["=== ATTENDANCE ==="])
-    writer.writerow(["Track ID", "Display Name", "First Seen", "Last Seen",
+    writer.writerow(["Track ID", "Display Name", "Face Verified", "Face Count", "First Seen", "Last Seen",
                      "Duration (s)", "Attendance Marked", "Needs Review"])
     for p in participants:
         writer.writerow([
             p.get("track_id", ""),
             p.get("display_name", "Anonymous"),
+            "Yes" if p.get("face_verified") else "No",
+            p.get("face_count", 0),
             p.get("first_seen_at", ""),
             p.get("last_seen_at", ""),
             p.get("total_duration_seconds", ""),

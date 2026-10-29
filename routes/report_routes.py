@@ -44,10 +44,14 @@ def download_report(session_id: str):
 def health():
     """System health check."""
     import platform, sys
+    from services.face_detector import FaceDetector
+    face_det = FaceDetector()
+
     checks = {
-        "python": sys.version,
+        "python": sys.version.split()[0],
         "platform": platform.system(),
         "opencv": _check_import("cv2"),
+        "face_detector_yunet": "available" if face_det.is_available else "fallback",
         "ultralytics": _check_import("ultralytics"),
         "librosa": _check_import("librosa"),
         "pyttsx3": _check_import("pyttsx3"),

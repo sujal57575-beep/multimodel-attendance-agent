@@ -17,6 +17,7 @@ import cv2
 import numpy as np
 
 from config import Config
+from services.face_detector import FaceDetector, FaceDetection
 
 logger = logging.getLogger(__name__)
 
@@ -35,12 +36,23 @@ class TrackedParticipant:
     attendance_marked: bool = False
     confidence_sum: float = 0.0
     confidence_count: int = 0
+    face_detected_count: int = 0
+    face_confidence_sum: float = 0.0
+    face_verified: bool = False
+    frontal_face_count: int = 0
+    last_face_bbox: Optional[tuple] = None
 
     @property
     def avg_confidence(self) -> float:
         if self.confidence_count == 0:
             return 0.0
         return self.confidence_sum / self.confidence_count
+
+    @property
+    def avg_face_confidence(self) -> float:
+        if self.face_detected_count == 0:
+            return 0.0
+        return self.face_confidence_sum / self.face_detected_count
 
     @property
     def total_duration(self) -> float:
@@ -74,9 +86,14 @@ def _load_yolo():
 
 
 def _hog_detector():
-    hog = cv2.HOGDescriptor()
-    hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
-    return hog
+    try:
+        if hasattr(cv2, "HOGDescriptor"):
+            hog = cv2.HOGDescriptor()
+            hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+            return hog
+    except Exception as e:
+        logger.warning("HOGDescriptor initialization failed: %s", e)
+    return None
 
 
 # ── Main processor ────────────────────────────────────────────────────────────
@@ -90,8 +107,13 @@ class VideoProcessor:
     def __init__(self):
         self.yolo = _load_yolo()
         self.hog = _hog_detector() if self.yolo is None else None
-        self._backend = "yolov8" if self.yolo else "hog"
-        logger.info("VideoProcessor backend: %s", self._backend)
+        self._backend = "yolov8" if self.yolo else ("hog" if self.hog else "face_yunet")
+        self.face_detector = FaceDetector()
+        logger.info(
+            "VideoProcessor backend: %s | Face detection: %s",
+            self._backend,
+            "YuNet (ONNX)" if self.face_detector.is_available else "Fallback heuristic",
+        )
 
     # ── Public API ────────────────────────────────────────────────────────
 
@@ -144,6 +166,7 @@ class VideoProcessor:
 
             processed += 1
             detections = self._detect(frame)
+            faces = self.face_detector.detect(frame) if Config.FACE_DETECTION_ENABLED else []
 
             # ── motion estimate ───────────────────────────────────────────
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -153,8 +176,10 @@ class VideoProcessor:
                 motion_score = float(np.mean(diff)) / 255.0
             prev_gray = gray
 
-            # ── update trackers ───────────────────────────────────────────
+            # ── update trackers with person + face association ────────────
             seen_ids = set()
+            matched_face_indices = set()
+
             for (x, y, w, h, conf) in detections:
                 tid = self._match_or_create(trackers, x, y, w, h, ts)
                 p = trackers[tid]
@@ -166,18 +191,66 @@ class VideoProcessor:
                 p.bbox_history.append((x, y, w, h))
                 seen_ids.add(tid)
 
-            # ── attendance marking ────────────────────────────────────────
+                # Match face to this participant's upper body region
+                for fi, face in enumerate(faces):
+                    if fi not in matched_face_indices and FaceDetector.match_face_to_person(face.bbox, (x, y, w, h)):
+                        p.face_detected_count += 1
+                        p.face_confidence_sum += face.confidence
+                        p.last_face_bbox = face.bbox
+                        if face.is_frontal:
+                            p.frontal_face_count += 1
+                        matched_face_indices.add(fi)
+                        break
+
+            # Handle faces not captured by full-body detector (e.g. seated behind desk)
+            for fi, face in enumerate(faces):
+                if fi not in matched_face_indices:
+                    fx, fy, fw, fh = face.bbox
+                    pw = int(fw * 2.2)
+                    ph = int(fh * 3.5)
+                    px = max(0, fx - int(fw * 0.6))
+                    py = max(0, fy)
+                    tid = self._match_or_create(trackers, px, py, pw, ph, ts)
+                    p = trackers[tid]
+                    p.last_frame = frame_idx
+                    p.last_time = ts
+                    p.frame_appearances += 1
+                    p.confidence_sum += face.confidence
+                    p.confidence_count += 1
+                    p.face_detected_count += 1
+                    p.face_confidence_sum += face.confidence
+                    p.last_face_bbox = face.bbox
+                    if face.is_frontal:
+                        p.frontal_face_count += 1
+                    p.bbox_history.append((px, py, pw, ph))
+                    seen_ids.add(tid)
+
+            # ── attendance marking with face verification ─────────────────
             threshold = Config.ATTENDANCE_THRESHOLD_SECONDS
             for p in trackers.values():
-                if not p.attendance_marked and p.total_duration >= threshold:
+                if p.face_detected_count >= Config.MIN_FACE_DETECTIONS:
+                    p.face_verified = True
+
+                attendance_eligible = (
+                    (p.total_duration >= threshold and p.face_verified)
+                    if Config.FACE_VERIFICATION_REQUIRED
+                    else (p.total_duration >= threshold)
+                )
+
+                if not p.attendance_marked and attendance_eligible:
                     p.attendance_marked = True
-                    logger.debug("Attendance marked for track %s", p.track_id)
+                    logger.debug(
+                        "Attendance marked for track %s (face_verified=%s, faces=%d)",
+                        p.track_id, p.face_verified, p.face_detected_count
+                    )
 
             # ── window metric accumulation ────────────────────────────────
             current_window.append({
                 "ts": ts,
-                "count": len(detections),
+                "count": max(len(detections), len(faces)),
                 "motion": motion_score,
+                "faces": len(faces),
+                "frontal_faces": sum(1 for f in faces if f.is_frontal),
             })
 
             if len(current_window) * sample_rate >= window_frames:
@@ -190,7 +263,7 @@ class VideoProcessor:
 
             if progress_cb and total_frames > 0:
                 pct = int((frame_idx / total_frames) * 100)
-                progress_cb(pct, f"Analysing frame {frame_idx}/{total_frames}")
+                progress_cb(pct, f"Analysing frame {frame_idx}/{total_frames} (Faces: {len(faces)})")
 
         # flush final window
         if current_window:
@@ -224,7 +297,21 @@ class VideoProcessor:
         """Return list of (x, y, w, h, confidence)."""
         if self.yolo:
             return self._yolo_detect(frame)
-        return self._hog_detect(frame)
+        if self.hog:
+            return self._hog_detect(frame)
+        # Face-based person localization fallback
+        if hasattr(self, "face_detector") and self.face_detector and self.face_detector.is_available:
+            faces = self.face_detector.detect(frame)
+            detections = []
+            for f in faces:
+                fx, fy, fw, fh = f.bbox
+                pw = int(fw * 2.2)
+                ph = int(fh * 3.5)
+                px = max(0, fx - int(fw * 0.6))
+                py = max(0, fy)
+                detections.append((px, py, pw, ph, f.confidence))
+            return detections
+        return []
 
     def _yolo_detect(self, frame) -> list[tuple]:
         try:
@@ -307,9 +394,15 @@ class VideoProcessor:
             return {}
         counts = [f["count"] for f in frames]
         motions = [f["motion"] for f in frames]
+        face_counts = [f.get("faces", 0) for f in frames]
+        frontal_counts = [f.get("frontal_faces", 0) for f in frames]
+
         max_count = max(counts) if counts else 1
         avg_presence = sum(min(c, max_count) for c in counts) / (len(counts) * max(max_count, 1))
         avg_motion = sum(motions) / len(motions) if motions else 0.0
+
+        total_faces = sum(face_counts)
+        head_pose = (sum(frontal_counts) / total_faces) if total_faces > 0 else 0.75
 
         ts_start = frames[0]["ts"]
         ts_end = frames[-1]["ts"]
@@ -321,4 +414,6 @@ class VideoProcessor:
             "max_participant_count": max(counts),
             "presence_score": round(min(avg_presence, 1.0), 4),
             "motion_score": round(min(avg_motion * 10, 1.0), 4),   # scale up
+            "head_pose_score": round(min(1.0, max(0.1, head_pose)), 4),
+            "avg_faces_detected": round(total_faces / max(len(frames), 1), 2),
         }

@@ -43,6 +43,19 @@ class Config:
     )
     DETECTION_CONFIDENCE = float(os.getenv("DETECTION_CONFIDENCE", "0.45"))
 
+    # ── Face Detection & Verification ──────────────────────────────────────
+    FACE_DETECTION_ENABLED = (
+        os.getenv("FACE_DETECTION_ENABLED", "true").lower() == "true"
+    )
+    FACE_MODEL_PATH = os.getenv(
+        "FACE_MODEL_PATH", str(BASE_DIR / "storage" / "face_detection_yunet_2023mar.onnx")
+    )
+    FACE_DETECTION_CONFIDENCE = float(os.getenv("FACE_DETECTION_CONFIDENCE", "0.50"))
+    FACE_VERIFICATION_REQUIRED = (
+        os.getenv("FACE_VERIFICATION_REQUIRED", "false").lower() == "true"
+    )
+    MIN_FACE_DETECTIONS = int(os.getenv("MIN_FACE_DETECTIONS", "3"))
+
     # ── Engagement ─────────────────────────────────────────────────────────
     ENGAGEMENT_WINDOW_SECONDS = int(os.getenv("ENGAGEMENT_WINDOW_SECONDS", "60"))
 

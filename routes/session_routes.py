@@ -18,6 +18,7 @@ from services.audio_processor import AudioProcessor
 from services.attendance_service import AttendanceService
 from services.engagement_service import EngagementService
 from services.recommendation_service import RecommendationService
+from services.multimodal_agent import MultimodalAttendanceAgent
 from utils.file_utils import save_upload
 from utils.validators import require_fields, sanitize_text
 from config import Config
@@ -185,40 +186,16 @@ def _run_processing(session_id: str, session: dict):
                 "UPDATE sessions SET status='processing' WHERE id=?", (session_id,)
             )
 
-        # 1. Video processing
-        vp = VideoProcessor()
-        result = vp.process(session["video_path"], session_id, progress_cb)
-
-        if result.error:
-            _progress[session_id] = {"pct": 0, "status": "error", "error": result.error}
-            _set_session_error(session_id, result.error)
-            return
-
-        # 2. Persist attendance
+        agent = MultimodalAttendanceAgent()
         session_start = datetime.fromisoformat(session["started_at"])
-        att_svc = AttendanceService()
-        att_svc.persist_results(result, session_start)
-
-        # 3. Audio processing
-        _progress[session_id]["status"] = "analysing_audio"
-        audio_svc = AudioProcessor()
-        audio_path = audio_svc.extract_audio(
-            session["video_path"], Config.PROCESSED_FOLDER
+        pipeline_output = agent.run_session_pipeline(
+            session_id=session_id,
+            video_path=session["video_path"],
+            session_start=session_start,
+            progress_cb=progress_cb,
         )
-        audio_data = {"windows": [], "session_summary": {}}
-        if audio_path:
-            audio_data = audio_svc.analyse(audio_path, Config.ENGAGEMENT_WINDOW_SECONDS)
 
-        # 4. Engagement metrics
-        _progress[session_id]["status"] = "computing_engagement"
-        eng_svc = EngagementService()
-        metrics = eng_svc.compute(
-            session_id,
-            result.frame_metrics,
-            audio_data["windows"],
-            result.fps,
-            session_start,
-        )
+        metrics = pipeline_output["engagement_metrics"]
         with db_session() as conn:
             for m in metrics:
                 conn.execute(
@@ -237,17 +214,7 @@ def _run_processing(session_id: str, session: dict):
                     ),
                 )
 
-        # 5. Recommendations
-        _progress[session_id]["status"] = "generating_recommendations"
-        summary = eng_svc.summarise(metrics)
-        total_p = len(result.participants)
-        marked = sum(1 for p in result.participants if p.attendance_marked)
-        att_pct = (marked / total_p * 100) if total_p else 0
-
-        rec_svc = RecommendationService()
-        recs = rec_svc.generate(
-            session_id, summary, audio_data["session_summary"], att_pct
-        )
+        recs = pipeline_output["recommendations"]
         with db_session() as conn:
             for r in recs:
                 conn.execute(
@@ -263,14 +230,15 @@ def _run_processing(session_id: str, session: dict):
                 )
 
         # 6. Update session record
+        v_res = pipeline_output["video_result"]
         with db_session() as conn:
             conn.execute(
                 """UPDATE sessions SET status='completed', ended_at=?,
                    total_frames=?, fps=?, duration_seconds=? WHERE id=?""",
                 (
                     datetime.utcnow().isoformat(),
-                    result.total_frames, round(result.fps, 2),
-                    round(result.duration_seconds, 2), session_id,
+                    v_res.total_frames, round(v_res.fps, 2),
+                    round(v_res.duration_seconds, 2), session_id,
                 ),
             )
 

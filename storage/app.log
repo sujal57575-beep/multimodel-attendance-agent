@@ -208,3 +208,283 @@
 2026-10-29 20:29:07,242 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/attendance HTTP/1.1" 200 -
 2026-10-29 20:29:07,255 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
 2026-10-29 20:29:07,263 [INFO] werkzeug — 127.0.0.1 - - [29/Oct/2026 20:29:07] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-30 01:22:20,410 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /sessions HTTP/1.1" 200 -
+2026-10-30 01:22:20,453 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-30 01:22:20,470 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-30 01:22:20,477 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /static/js/sessions.js HTTP/1.1" 304 -
+2026-10-30 01:22:20,502 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:22:20,637 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /sessions HTTP/1.1" 200 -
+2026-10-30 01:22:20,661 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-30 01:22:20,662 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-30 01:22:20,663 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /static/js/sessions.js HTTP/1.1" 304 -
+2026-10-30 01:22:20,671 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:22:20,827 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /sessions HTTP/1.1" 200 -
+2026-10-30 01:22:20,848 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-30 01:22:20,851 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-30 01:22:20,854 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /static/js/sessions.js HTTP/1.1" 304 -
+2026-10-30 01:22:20,863 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:20] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:22:27,734 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /dashboard HTTP/1.1" 200 -
+2026-10-30 01:22:27,756 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-30 01:22:27,759 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-30 01:22:27,759 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /static/js/sessions.js HTTP/1.1" 304 -
+2026-10-30 01:22:27,778 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:22:27,787 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-30 01:22:27,803 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-30 01:22:27,806 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-30 01:22:27,808 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-30 01:22:27,810 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-30 01:22:27,813 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-30 01:22:27,816 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-30 01:22:27,824 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-30 01:22:27,831 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/attendance HTTP/1.1" 200 -
+2026-10-30 01:22:27,836 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/engagement HTTP/1.1" 200 -
+2026-10-30 01:22:27,840 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-30 01:22:27,843 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-30 01:22:27,852 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:22:27,860 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:22:27,864 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:22:27,868 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/engagement HTTP/1.1" 200 -
+2026-10-30 01:22:27,872 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-30 01:22:27,876 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-30 01:22:27,881 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-30 01:22:27,885 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-30 01:22:27,892 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-30 01:22:27,895 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-30 01:22:27,899 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-30 01:22:27,905 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-30 01:22:27,909 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-30 01:22:27,923 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-30 01:22:27,930 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:22:27] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/attendance HTTP/1.1" 200 -
+2026-10-30 01:28:32,697 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:32] "GET /sessions HTTP/1.1" 200 -
+2026-10-30 01:28:32,722 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:32] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-30 01:28:32,724 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:32] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-30 01:28:32,725 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:32] "GET /static/js/sessions.js HTTP/1.1" 304 -
+2026-10-30 01:28:32,737 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:32] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:28:48,621 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:48] "GET /sessions HTTP/1.1" 200 -
+2026-10-30 01:28:48,650 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:48] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-30 01:28:48,652 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:48] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-30 01:28:48,653 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:48] "GET /static/js/sessions.js HTTP/1.1" 304 -
+2026-10-30 01:28:48,658 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:48] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:28:52,238 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:52] "GET /settings HTTP/1.1" 200 -
+2026-10-30 01:28:52,267 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:52] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-30 01:28:52,270 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:52] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-30 01:28:52,283 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:28:52] "GET /api/health HTTP/1.1" 200 -
+2026-10-30 01:31:21,229 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /dashboard HTTP/1.1" 200 -
+2026-10-30 01:31:21,261 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-30 01:31:21,265 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-30 01:31:21,269 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /static/js/sessions.js HTTP/1.1" 304 -
+2026-10-30 01:31:21,286 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:31:21,297 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-30 01:31:21,301 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-30 01:31:21,320 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-30 01:31:21,321 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-30 01:31:21,323 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-30 01:31:21,323 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-30 01:31:21,328 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-30 01:31:21,335 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-30 01:31:21,344 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/attendance HTTP/1.1" 200 -
+2026-10-30 01:31:21,348 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-30 01:31:21,349 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-30 01:31:21,351 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/engagement HTTP/1.1" 200 -
+2026-10-30 01:31:21,367 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:31:21,376 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:31:21,381 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:31:21,389 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/engagement HTTP/1.1" 200 -
+2026-10-30 01:31:21,393 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-30 01:31:21,397 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-30 01:31:21,404 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-30 01:31:21,417 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-30 01:31:21,426 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-30 01:31:21,431 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-30 01:31:21,438 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-30 01:31:21,446 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-30 01:31:21,455 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-30 01:31:21,484 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-30 01:31:21,487 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:31:21] "GET /api/sessions/d9c35e33223441a7af6bba9362431043/attendance HTTP/1.1" 200 -
+2026-10-30 01:32:53,072 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:32:53,081 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:32:53,093 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:32:53,098 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:32:53,102 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:32:53,107 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:32:53,112 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:32:53,116 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:32:53,120 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:32:53,132 [WARNING] services.audio_processor — soundfile not installed; audio analysis disabled
+2026-10-30 01:32:53,133 [WARNING] services.audio_processor — librosa not installed; audio features unavailable
+2026-10-30 01:32:53,153 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:32:53,276 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:32:53,281 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:32:53,293 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:32:53,336 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:32:53,343 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:32:53,406 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:32:53,412 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:32:53,415 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:32:53,421 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:32:53,437 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:32:53,442 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:32:53,447 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:32:53,452 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:32:53,457 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:32:53,462 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:32:53,467 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:33:16,445 [INFO] models.database — Database initialised at C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\attendance.db
+2026-10-30 01:33:16,561 [WARNING] services.audio_processor — soundfile not installed; audio analysis disabled
+2026-10-30 01:33:16,561 [WARNING] services.audio_processor — librosa not installed; audio features unavailable
+2026-10-30 01:33:16,576 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:33:35,653 [INFO] models.database — Database initialised at C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\attendance.db
+2026-10-30 01:33:35,768 [WARNING] services.audio_processor — soundfile not installed; audio analysis disabled
+2026-10-30 01:33:35,769 [WARNING] services.audio_processor — librosa not installed; audio features unavailable
+2026-10-30 01:33:35,786 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:35:39,774 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:39] "GET /dashboard HTTP/1.1" 200 -
+2026-10-30 01:35:39,792 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:39] "GET /static/css/style.css HTTP/1.1" 304 -
+2026-10-30 01:35:39,795 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:39] "GET /static/js/dashboard.js HTTP/1.1" 304 -
+2026-10-30 01:35:39,796 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:39] "GET /static/js/sessions.js HTTP/1.1" 304 -
+2026-10-30 01:35:39,884 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:39] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:35:39,893 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:39] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:39,924 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:39] "GET /api/sessions/9ba8e78dab104f5fabfb5eb005226dc7/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:39,926 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:39] "GET /api/sessions/d2322f02cc2240fc861b765395e68d45/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:39,932 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:39] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,084 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/d2322f02cc2240fc861b765395e68d45/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,091 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/9ba8e78dab104f5fabfb5eb005226dc7/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,098 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/cb4d3e0c21144c489ca3d99bbf6292d4/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,099 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,101 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,106 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,108 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/a0e94e7dc4ae44f28901695fcd5e2ad1/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,117 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,118 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/e39af4192eac473ca8daf3ee0ff546b9/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,119 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,120 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/cb4d3e0c21144c489ca3d99bbf6292d4/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,121 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/a0e94e7dc4ae44f28901695fcd5e2ad1/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,127 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,148 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,154 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,157 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/e39af4192eac473ca8daf3ee0ff546b9/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,177 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:35:40,198 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:35:40,204 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions HTTP/1.1" 200 -
+2026-10-30 01:35:40,209 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/0f5b8395afed477c973542598ab15326/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,228 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,229 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/e39af4192eac473ca8daf3ee0ff546b9/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,234 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/9ba8e78dab104f5fabfb5eb005226dc7/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,261 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/d2322f02cc2240fc861b765395e68d45/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,270 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,273 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,278 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/cb4d3e0c21144c489ca3d99bbf6292d4/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,282 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/a0e94e7dc4ae44f28901695fcd5e2ad1/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,307 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,309 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/f3d32c9165714bea8212a173d1d21a2a/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,316 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/a0e94e7dc4ae44f28901695fcd5e2ad1/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,321 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/48e4b348cb6242e79aac7f5ce7b5dcb7/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,331 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/e39af4192eac473ca8daf3ee0ff546b9/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,334 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/cb4d3e0c21144c489ca3d99bbf6292d4/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,337 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/0f5b8395afed477c973542598ab15326/attendance HTTP/1.1" 200 -
+2026-10-30 01:35:40,341 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/015a7e46ca864d0cb34679211a2b4174/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,351 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/d2322f02cc2240fc861b765395e68d45/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,356 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/9ba8e78dab104f5fabfb5eb005226dc7/engagement HTTP/1.1" 200 -
+2026-10-30 01:35:40,363 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:35:40] "GET /api/sessions/18de140d8ffa4635b85d467be4714405/engagement HTTP/1.1" 200 -
+2026-10-30 01:36:21,946 [INFO] models.database — Database initialised at C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\attendance.db
+2026-10-30 01:36:22,066 [WARNING] services.audio_processor — soundfile not installed; audio analysis disabled
+2026-10-30 01:36:22,067 [WARNING] services.audio_processor — librosa not installed; audio features unavailable
+2026-10-30 01:36:22,082 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:37:51,870 [INFO] models.database — Database initialised at C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\attendance.db
+2026-10-30 01:37:51,991 [WARNING] services.audio_processor — soundfile not installed; audio analysis disabled
+2026-10-30 01:37:51,992 [WARNING] services.audio_processor — librosa not installed; audio features unavailable
+2026-10-30 01:37:52,007 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:37:52,020 [INFO] werkzeug — WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.7:5000
+2026-10-30 01:37:52,020 [INFO] werkzeug — Press CTRL+C to quit
+2026-10-30 01:38:05,754 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:38:05,812 [INFO] werkzeug — 127.0.0.1 - - [30/Oct/2026 01:38:05] "GET /api/health HTTP/1.1" 200 -
+2026-10-30 01:43:59,801 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:43:59,810 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:43:59,833 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:43:59,837 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:43:59,842 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:43:59,847 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:43:59,851 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:43:59,857 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:43:59,861 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:43:59,880 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:43:59,936 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:43:59,941 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:43:59,953 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:43:59,956 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:43:59,960 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:43:59,962 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:43:59,963 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:43:59,965 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:43:59,966 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:43:59,968 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:43:59,973 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:43:59,978 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:43:59,990 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:43:59,995 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:43:59,998 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:44:00,003 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:44:00,018 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:44:00,024 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:44:00,029 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:44:00,035 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:44:00,039 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:44:00,045 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:44:00,050 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:33,959 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:44:33,967 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:33,978 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:33,983 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:33,987 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:33,992 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:33,996 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:34,001 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:34,006 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:44:34,021 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:44:34,079 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:44:34,084 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:44:34,090 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:34,093 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:44:34,098 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:34,098 [INFO] services.video_processor — VideoProcessor backend: face_yunet | Face detection: YuNet (ONNX)
+2026-10-30 01:44:34,098 [INFO] services.multimodal_agent — MultimodalAttendanceAgent initialized.
+2026-10-30 01:44:34,099 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:44:34,104 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:34,104 [INFO] services.video_processor — VideoProcessor backend: face_yunet | Face detection: YuNet (ONNX)
+2026-10-30 01:44:34,104 [INFO] services.multimodal_agent — MultimodalAttendanceAgent initialized.
+2026-10-30 01:44:34,104 [ERROR] services.audio_processor — Error reading audio file non_existent_file.wav: [Errno 2] No such file or directory: 'non_existent_file.wav'
+2026-10-30 01:44:34,106 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:44:34,110 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:34,110 [INFO] services.video_processor — VideoProcessor backend: face_yunet | Face detection: YuNet (ONNX)
+2026-10-30 01:44:34,110 [INFO] services.multimodal_agent — MultimodalAttendanceAgent initialized.
+2026-10-30 01:44:34,111 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:44:34,116 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:34,116 [INFO] services.video_processor — VideoProcessor backend: face_yunet | Face detection: YuNet (ONNX)
+2026-10-30 01:44:34,116 [INFO] services.multimodal_agent — MultimodalAttendanceAgent initialized.
+2026-10-30 01:44:34,117 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:44:34,121 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:34,122 [INFO] services.video_processor — VideoProcessor backend: face_yunet | Face detection: YuNet (ONNX)
+2026-10-30 01:44:34,122 [INFO] services.multimodal_agent — MultimodalAttendanceAgent initialized.
+2026-10-30 01:44:34,123 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:44:34,130 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:34,130 [INFO] services.video_processor — VideoProcessor backend: face_yunet | Face detection: YuNet (ONNX)
+2026-10-30 01:44:34,130 [INFO] services.multimodal_agent — MultimodalAttendanceAgent initialized.
+2026-10-30 01:44:34,132 [WARNING] services.video_processor — YOLOv8 unavailable (No module named 'ultralytics'); falling back to HOG
+2026-10-30 01:44:34,136 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx
+2026-10-30 01:44:34,136 [INFO] services.video_processor — VideoProcessor backend: face_yunet | Face detection: YuNet (ONNX)
+2026-10-30 01:44:34,136 [INFO] services.multimodal_agent — MultimodalAttendanceAgent initialized.
+2026-10-30 01:44:34,141 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:44:34,149 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:44:34,159 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:44:34,164 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:44:34,168 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:44:34,173 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:44:34,188 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:44:34,194 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:44:34,199 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:44:34,204 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:44:34,209 [INFO] models.database — Database initialised at C:\Users\OMEN\AppData\Local\Temp\test_attend_sessions.db
+2026-10-30 01:44:34,215 [INFO] app — Multimodal Attendance Agent started (DEBUG=False)
+2026-10-30 01:44:34,220 [INFO] services.face_detector — YuNet face detector initialized from C:\Users\OMEN\OneDrive\Desktop\New folder (2)\multimodal-attendance-agent\storage\face_detection_yunet_2023mar.onnx

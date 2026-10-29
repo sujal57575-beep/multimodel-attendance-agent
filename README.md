@@ -8,10 +8,26 @@
 
 The Multimodal Attendance & Engagement Agent is a full-stack web application for educational institutions that:
 
-- **Automates attendance** from live camera or uploaded video using YOLOv8 person detection
-- **Analyses engagement** by combining visual motion, participant presence, and audio activity signals
+- **Automates attendance** from video or webcam using dual-tier person detection and OpenCV YuNet DNN face detection with landmark orientation verification
+- **Analyses engagement** by combining visual motion, participant presence, facial attentiveness, and audio activity signals
+- **Live Face Scanner** for real-time webcam face scanning and attendance verification
 - **Generates teaching recommendations** using a rule-based engine (+ optional Google Gemini)
 - **Runs entirely locally** — no student data leaves your machine
+
+---
+
+## Application Demo & Walkthrough
+
+![Multimodal Attendance & Engagement Agent Demo Walkthrough](docs/assets/demo.webp)
+
+*Interactive recorded walkthrough showcasing the complete end-to-end workflow:*
+- **Executive Dashboard**: Session statistics, average attendance rate, engagement indexes, and quick access.
+- **Session Management**: Session creation, video upload, automated asynchronous multimodal pipeline.
+- **Attendance Verification**: Participant tracking, presence percentages, and **Face-Verified** statuses.
+- **Live Webcam Face Scanner**: Real-time browser webcam feed scanning with OpenCV YuNet DNN face detection & 5-point landmark orientation verification.
+- **Multimodal Engagement Analytics**: Per-minute composite engagement timeline, visual motion metrics, and audio speech activity charts.
+- **AI Teaching Recommendations**: Actionable pedagogical suggestions linked with measured classroom evidence.
+- **Settings & Privacy**: Local processing switches, facial verification controls, and retention configuration.
 
 ---
 
@@ -22,16 +38,17 @@ Browser (HTML/CSS/JS + Chart.js)
        │
 Flask API Gateway (Python)
        ├── Session Routes         → CRUD + video upload + async processing
-       ├── Attendance Routes      → Read & manual correction
+       ├── Attendance Routes      → Read, manual correction & live face scanning
        ├── Engagement Routes      → Windowed metrics
        ├── Recommendation Routes  → AI/rule-based suggestions
        └── Report Routes          → CSV export + health check
        │
 Services Layer
        ├── VideoProcessor         → YOLOv8 detection + centroid tracker
+       ├── FaceDetector           → OpenCV YuNet DNN face detection & landmarks
        ├── AudioProcessor         → librosa VAD + ffmpeg extraction
        ├── EngagementService      → Weighted signal fusion
-       ├── AttendanceService      → DB persistence
+       ├── AttendanceService      → DB persistence with face verification
        ├── RecommendationService  → Rule engine + optional Gemini
        ├── AIGateway              → Gemini adapter
        └── TTSService             → pyttsx3 offline TTS
@@ -78,10 +95,14 @@ python scripts/initialize_db.py
 python scripts/initialize_db.py --seed
 
 # 6. Run the application
+# Option A: Full Flask Web Application (with live webcam scanner)
 python app.py
+
+# Option B: Streamlit Multi-Page Analytics Dashboard
+streamlit run streamlit_app.py
 ```
 
-Open **http://localhost:5000** in your browser.
+Open **http://localhost:5000** for the main Flask portal or **http://localhost:8501** for the Streamlit dashboard.
 
 ---
 

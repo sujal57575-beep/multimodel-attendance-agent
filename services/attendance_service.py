@@ -11,6 +11,7 @@ import uuid
 from datetime import datetime, timezone
 from typing import Optional
 
+from config import Config
 from models.database import db_session, rows_to_list
 from services.video_processor import ProcessingResult
 
@@ -32,11 +33,13 @@ class AttendanceService:
                 lt = _offset_dt(session_start, p.last_time).isoformat()
                 needs_review = int(p.avg_confidence < 0.5 or p.frame_appearances < 3)
 
+                face_verified_int = int(p.face_verified or p.face_detected_count >= Config.MIN_FACE_DETECTIONS)
                 conn.execute(
                     """INSERT OR REPLACE INTO participants
                        (id, session_id, track_id, first_seen_at, last_seen_at,
-                        total_duration_seconds, attendance_marked, confidence, needs_review)
-                       VALUES (?,?,?,?,?,?,?,?,?)""",
+                        total_duration_seconds, attendance_marked, confidence, needs_review,
+                        face_verified, face_count, face_confidence)
+                       VALUES (?,?,?,?,?,?,?,?,?,?,?,?)""",
                     (
                         pid,
                         result.session_id,
@@ -46,6 +49,9 @@ class AttendanceService:
                         int(p.attendance_marked),
                         round(p.avg_confidence, 4),
                         needs_review,
+                        face_verified_int,
+                        p.face_detected_count,
+                        round(p.avg_face_confidence, 4),
                     ),
                 )
                 # Attendance event
@@ -80,7 +86,7 @@ class AttendanceService:
         return rows_to_list(rows)
 
     def update_participant(self, participant_id: str, data: dict) -> bool:
-        allowed = {"display_name", "student_id", "attendance_marked", "needs_review"}
+        allowed = {"display_name", "student_id", "attendance_marked", "needs_review", "face_verified"}
         updates = {k: v for k, v in data.items() if k in allowed}
         if not updates:
             return False

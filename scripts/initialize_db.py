@@ -57,19 +57,26 @@ if SEED:
             for j in range(num_p):
                 pid  = uuid.uuid4().hex
                 dur  = random.uniform(60, 4000)
+                is_att = 1 if dur >= Config.ATTENDANCE_THRESHOLD_SECONDS else 0
+                face_cnt = random.randint(5, 45) if is_att else random.randint(0, 4)
+                face_ver = 1 if face_cnt >= Config.MIN_FACE_DETECTIONS else 0
                 conn.execute(
                     """INSERT INTO participants
                        (id, session_id, track_id, first_seen_at, last_seen_at,
-                        total_duration_seconds, attendance_marked, confidence, needs_review)
-                       VALUES (?,?,?,?,?,?,?,?,?)""",
+                        total_duration_seconds, attendance_marked, confidence, needs_review,
+                        face_verified, face_count, face_confidence)
+                       VALUES (?,?,?,?,?,?,?,?,?,?,?,?)""",
                     (
                         pid, sid, f"T{j:04d}",
                         started.isoformat(),
                         (started + timedelta(seconds=dur)).isoformat(),
                         round(dur, 2),
-                        1 if dur >= Config.ATTENDANCE_THRESHOLD_SECONDS else 0,
-                        round(random.uniform(0.45, 0.98), 4),
+                        is_att,
+                        round(random.uniform(0.65, 0.98), 4),
                         1 if random.random() < 0.1 else 0,
+                        face_ver,
+                        face_cnt,
+                        round(random.uniform(0.70, 0.96), 4) if face_cnt > 0 else 0.0,
                     ),
                 )
 
